@@ -29,7 +29,7 @@ function scrollToVideos() {
           <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 mb-6 backdrop-blur-sm">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" aria-hidden="true"></span>
             <span class="text-white/90 text-xs sm:text-sm font-medium">
-              PMDC Verified · FCPS · MRCPS Glasgow
+              FCPS · MRCPS Glasgow 🇬🇧 · MACG USA 🇺🇸
             </span>
           </div>
 
@@ -38,8 +38,11 @@ function scrollToVideos() {
             <span class="text-teal-300">Raza Zaidi</span>
           </h1>
 
-          <p class="text-xl sm:text-2xl font-semibold text-white/80 mb-3">
+          <p class="text-xl sm:text-2xl font-semibold text-white/80 mb-2">
             Gastroenterologist &amp; Hepatologist
+          </p>
+          <p class="text-sm sm:text-base font-medium text-teal-300 mb-8">
+            Asst. Professor of Gastroenterology · Sheikh Zayed Hospital, Lahore
           </p>
           <p class="text-base sm:text-lg text-white/55 max-w-lg mx-auto lg:mx-0 mb-10">
             10+ years helping patients understand and overcome gut &amp; liver
@@ -73,7 +76,7 @@ function scrollToVideos() {
           <!-- Stats strip -->
           <div class="mt-12 flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-4">
             <div class="text-center lg:text-left">
-              <p class="text-3xl sm:text-4xl font-black text-white">10<span class="text-teal-300">+</span></p>
+              <p class="text-3xl sm:text-4xl font-black text-white">20<span class="text-teal-300">+</span></p>
               <p class="text-white/50 text-xs sm:text-sm font-medium mt-0.5">Years Experience</p>
             </div>
             <div class="hidden sm:block w-px bg-white/15 self-stretch"></div>
@@ -81,14 +84,14 @@ function scrollToVideos() {
               <p class="text-3xl sm:text-4xl font-black text-white">100<span class="text-teal-300">%</span></p>
               <p class="text-white/50 text-xs sm:text-sm font-medium mt-0.5">Patient Satisfaction</p>
             </div>
-            <div class="hidden sm:block w-px bg-white/15 self-stretch"></div>
-            <div class="text-center lg:text-left">
+            <!-- <div class="hidden sm:block w-px bg-white/15 self-stretch"></div> -->
+            <!-- <div class="text-center lg:text-left">
               <p class="text-3xl sm:text-4xl font-black text-white">4<span class="text-teal-300"> </span></p>
               <p class="text-white/50 text-xs sm:text-sm font-medium mt-0.5">Clinic Locations</p>
-            </div>
+            </div> -->
             <div class="hidden sm:block w-px bg-white/15 self-stretch"></div>
             <div class="text-center lg:text-left">
-              <p class="text-3xl sm:text-4xl font-black text-white">Rs.<span class="text-teal-300">2K</span></p>
+              <p class="text-3xl sm:text-4xl font-black text-white">Rs.<span class="text-teal-300">4K</span></p>
               <p class="text-white/50 text-xs sm:text-sm font-medium mt-0.5">Starting Fee</p>
             </div>
           </div>
@@ -96,11 +99,12 @@ function scrollToVideos() {
 
         <!-- ── Photo column ── -->
         <div class="order-1 lg:order-2 flex justify-center">
-          <div class="relative">
+          <!-- Outer container with padding creates a clear zone for the floating badges -->
+          <div class="relative pt-10 pb-10 pl-10 pr-10">
             <!-- Glow ring -->
             <div
               aria-hidden="true"
-              class="absolute inset-0 scale-105 rounded-3xl bg-teal-400/20 blur-2xl"
+              class="absolute inset-4 rounded-3xl bg-teal-400/20 blur-2xl scale-110"
             ></div>
 
             <!-- Photo frame -->
@@ -122,9 +126,9 @@ function scrollToVideos() {
               </div>
             </div>
 
-            <!-- Floating badge: years exp -->
+            <!-- Floating badge: years exp — sits in the bottom-left padding zone -->
             <div
-              class="absolute -bottom-4 -left-4 sm:-bottom-5 sm:-left-5 bg-white rounded-2xl shadow-xl px-4 py-2.5 flex items-center gap-2.5"
+              class="absolute bottom-0 left-0 bg-white rounded-2xl shadow-xl px-4 py-2.5 flex items-center gap-2.5"
               aria-hidden="true"
             >
               <div class="w-9 h-9 rounded-xl bg-brand-100 flex items-center justify-center flex-shrink-0">
@@ -134,13 +138,13 @@ function scrollToVideos() {
               </div>
               <div>
                 <p class="text-xs text-slate-500 font-medium">Experience</p>
-                <p class="text-slate-900 font-black text-sm leading-none">10+ Years</p>
+                <p class="text-slate-900 font-black text-sm leading-none">20+ Years</p>
               </div>
             </div>
 
-            <!-- Floating badge: verified -->
+            <!-- Floating badge: verified — sits in the top-right padding zone -->
             <div
-              class="absolute -top-4 -right-4 sm:-top-5 sm:-right-5 bg-white rounded-2xl shadow-xl px-4 py-2.5 flex items-center gap-2"
+              class="absolute top-0 right-0 bg-white rounded-2xl shadow-xl px-4 py-2.5 flex items-center gap-2"
               aria-hidden="true"
             >
               <div class="w-9 h-9 rounded-xl bg-emerald-100 flex items-center justify-center flex-shrink-0">

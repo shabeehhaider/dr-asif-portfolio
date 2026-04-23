@@ -7,10 +7,11 @@ const { el: leftEl, isVisible: leftVisible } = useFadeIn()
 const { el: rightEl, isVisible: rightVisible } = useFadeIn()
 
 const credentials = [
-  { label: 'MBBS',            sub: 'Bachelor of Medicine & Surgery' },
-  { label: 'FCPS',            sub: 'Gastroenterology — CPSP Pakistan' },
-  { label: 'MRCPS Glasgow',   sub: 'Royal College of Physicians & Surgeons' },
-  { label: 'PMDC Verified',   sub: 'Pakistan Medical & Dental Council' },
+  { label: 'MBBS 🇵🇰',          sub: 'Bachelor of Medicine & Surgery' },
+  { label: 'FCPS 🇵🇰',          sub: 'Gastroenterology — CPSP Pakistan' },
+  { label: 'MRCPS Glasgow 🇬🇧',  sub: 'Royal College of Physicians & Surgeons' },
+  { label: 'MACG 🇺🇸',          sub: 'American College of Gastroenterology' },
+  { label: 'PMDC Verified',     sub: 'Pakistan Medical & Dental Council' },
 ]
 
 const highlights = [
@@ -41,7 +42,7 @@ const highlights = [
             <div class="relative w-full max-w-sm mx-auto rounded-3xl overflow-hidden shadow-xl aspect-[4/5] flex items-end">
               <img
                 :src="img2"
-                alt="Dr. Zaidi performing an endoscopy procedure"
+                alt="Dr. Asif Raza Zaidi performing an endoscopy procedure"
                 class="absolute inset-0 w-full h-full object-cover object-center"
                 loading="lazy"
               />
@@ -59,7 +60,7 @@ const highlights = [
             >
               <img
                 :src="img3"
-                alt="Dr. Zaidi performing endoscopy with his medical team"
+                alt="Dr. Asif Raza Zaidi performing endoscopy with his medical team"
                 class="w-full aspect-[3/4] object-cover object-top"
                 loading="lazy"
               />
@@ -98,28 +99,37 @@ const highlights = [
           </span>
           <h2
             id="about-heading"
-            class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight mb-6"
+            class="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight mb-2"
           >
             A Trusted Expert in
             <span class="text-brand-600">Gut &amp; Liver Health</span>
           </h2>
 
+          <!-- Academic position badge -->
+          <div class="inline-flex items-center gap-2 bg-brand-50 border border-brand-100 rounded-full px-4 py-1.5 mb-6">
+            <svg class="w-4 h-4 text-brand-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+            </svg>
+            <span class="text-brand-700 font-semibold text-sm">Asst. Professor of Gastroenterology · Sheikh Zayed Hospital, Lahore</span>
+          </div>
+
           <div class="space-y-4 text-slate-600 text-base leading-relaxed">
             <p>
               Dr. Syed Asif Raza Zaidi is a senior Gastroenterologist and Hepatologist
-              with over a decade of dedicated practice in Lahore. Holding an FCPS in
-              Gastroenterology from the College of Physicians and Surgeons Pakistan and
-              an MRCPS from the prestigious Royal College of Physicians and Surgeons,
-              Glasgow, he brings international standards of care to every patient.
+              and Assistant Professor of Gastroenterology at Sheikh Zayed Hospital,
+              Lahore. With over a decade of dedicated clinical and academic practice,
+              he holds an FCPS in Gastroenterology (CPSP Pakistan), an MRCPS from the
+              Royal College of Physicians and Surgeons, Glasgow 🇬🇧, and is a Member
+              of the American College of Gastroenterology (MACG) 🇺🇸.
             </p>
             <p>
               With expertise spanning advanced endoscopy, colonoscopy, ERCP, hepatitis
               management, fatty liver disease, GERD, and many more GI conditions, Dr.
-              Zaidi offers comprehensive diagnostic and therapeutic services across four
-              clinic locations in Lahore.
+              Zaidi offers comprehensive diagnostic and therapeutic services at his
+              Zaidi Gastro &amp; Liver Clinic and across multiple clinic locations in Lahore.
             </p>
             <p>
-              A strong believer in patient education, Dr. Zaidi actively shares health
+              A strong believer in patient education, Dr. Asif Raza Zaidi actively shares health
               information in both Urdu and English through his YouTube channel
               (<a
                 href="https://www.youtube.com/@DrSyedAsifRazaZaidiOfficial"

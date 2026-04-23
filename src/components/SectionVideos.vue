@@ -33,7 +33,7 @@ const CHANNEL_URL = 'https://www.youtube.com/@DrSyedAsifRazaZaidiOfficial'
           Health Videos in Urdu &amp; English
         </h2>
         <p class="text-slate-500 mt-3 max-w-2xl mx-auto text-base sm:text-lg">
-          Dr. Zaidi explains GI and liver conditions in plain language. Click any
+          Dr. Asif Raza Zaidi explains GI and liver conditions in plain language. Click any
           video to watch it right here — no need to leave the page.
         </p>
       </div>

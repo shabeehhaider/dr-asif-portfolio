@@ -136,7 +136,7 @@ const services = [
           Services &amp; Conditions Treated
         </h2>
         <p class="text-slate-500 mt-3 max-w-2xl mx-auto text-base sm:text-lg">
-          From diagnostic endoscopy to complex hepatology, Dr. Zaidi provides
+          From diagnostic endoscopy to complex hepatology, Dr. Asif Raza Zaidi provides
           comprehensive care for all GI and liver conditions.
         </p>
       </div>

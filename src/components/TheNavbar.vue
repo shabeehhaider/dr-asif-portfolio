@@ -19,8 +19,9 @@ const navLinks = [
 
 const OLADOC_URL = 'https://oladoc.com/pakistan/lahore/dr/gastroenterologist/asif-raza-zaidi/17719'
 
-// Track which section is currently centred in the viewport.
-// rootMargin '-45% 0px -55% 0px' fires when a section crosses the middle line.
+// Track the active section as the user scrolls.
+// rootMargin '-15% 0px -75% 0px' → 10% trigger window sitting just above
+// the viewport midpoint. 15+75=90, leaving 10% active zone (15%–25% from top).
 let observer = null
 
 onMounted(() => {
@@ -30,7 +31,7 @@ onMounted(() => {
         if (entry.isIntersecting) activeSection.value = entry.target.id
       })
     },
-    { rootMargin: '-45% 0px -55% 0px', threshold: 0 },
+    { rootMargin: '-15% 0px -75% 0px', threshold: 0 },
   )
 
   const ids = ['home', ...navLinks.map((l) => l.id)]
@@ -106,11 +107,11 @@ function smoothScroll(href) {
             :aria-current="activeSection === link.id ? 'true' : undefined"
           >
             {{ link.label }}
-            <!-- Active underline dot -->
+            <!-- Active dot — always in DOM to prevent height jitter; visibility via opacity -->
             <span
-              v-if="activeSection === link.id"
               :class="[
-                'block mx-auto mt-0.5 w-1 h-1 rounded-full transition-all',
+                'block mx-auto mt-0.5 w-1 h-1 rounded-full transition-opacity duration-200',
+                activeSection === link.id ? 'opacity-100' : 'opacity-0',
                 isScrolled ? 'bg-brand-600' : 'bg-white',
               ]"
               aria-hidden="true"

@@ -36,7 +36,7 @@ const showEmbed = ref(true)
             </svg>
           </div>
           <div>
-            <p class="font-bold text-slate-900 text-sm">All Videos — Dr. Zaidi's Channel</p>
+            <p class="font-bold text-slate-900 text-sm">All Videos — Dr. Asif Raza Zaidi's Channel</p>
             <p class="text-slate-400 text-xs">Browse &amp; watch every video right here. Updated automatically.</p>
           </div>
         </div>
@@ -93,7 +93,7 @@ const showEmbed = ref(true)
         </div>
         <h3 class="text-xl font-bold text-slate-900 mb-2">Health Education Videos</h3>
         <p class="text-slate-500 text-sm max-w-md mx-auto mb-2">
-          Dr. Zaidi regularly uploads educational videos about gut health, liver
+          Dr. Asif Raza Zaidi regularly uploads educational videos about gut health, liver
           disease, and GI procedures in Urdu and English.
         </p>
         <p class="text-slate-400 text-xs max-w-md mx-auto mb-6">
