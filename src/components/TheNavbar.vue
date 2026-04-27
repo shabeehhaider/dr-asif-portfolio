@@ -84,8 +84,7 @@ function smoothScroll(href) {
             <path d="M9 3a1 1 0 012 0v4h4a1 1 0 010 2h-4v4a1 1 0 01-2 0v-4H5a1 1 0 010-2h4V3z"/>
           </svg>
         </span>
-        <span class="hidden sm:block">Dr. Asif Raza Zaidi</span>
-        <span class="block sm:hidden">Dr. A.R. Zaidi</span>
+        <span>Dr. Syed Asif Raza Zaidi</span>
       </a>
 
       <!-- Desktop links -->
