@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dr-asif-portfolio.web.app/sitemap.xml
