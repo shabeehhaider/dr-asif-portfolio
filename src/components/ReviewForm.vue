@@ -16,11 +16,14 @@ const condition = ref('')
 const message   = ref('')
 const errors    = ref({})
 
+const MAX_CHARS   = 1000
+const starLabels  = ['Terrible', 'Poor', 'Average', 'Good', 'Excellent']
+
 function validate() {
   errors.value = {}
-  if (!name.value.trim())                        errors.value.name    = 'Name is required.'
-  if (!rating.value)                             errors.value.rating  = 'Please choose a star rating.'
-  if (message.value.trim().length < 20)          errors.value.message = 'Please write at least 20 characters.'
+  if (!name.value.trim())               errors.value.name    = 'Name is required.'
+  if (!rating.value)                    errors.value.rating  = 'Please choose a star rating.'
+  if (message.value.trim().length < 20) errors.value.message = 'Please write at least 20 characters.'
   return Object.keys(errors.value).length === 0
 }
 
@@ -40,32 +43,46 @@ function reset() {
 }
 
 defineExpose({ reset })
-
-const starLabels = ['Terrible', 'Poor', 'Average', 'Good', 'Excellent']
 </script>
 
 <template>
   <form @submit.prevent="submit" novalidate class="space-y-5">
 
-    <!-- Name -->
-    <div>
-      <label class="block text-sm font-semibold text-slate-700 mb-1.5">
-        Your Name <span class="text-red-500">*</span>
-      </label>
-      <input
-        v-model="name"
-        type="text"
-        placeholder="e.g. Ahmed K."
-        maxlength="60"
-        autocomplete="name"
-        :class="[
-          'w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:ring-2 transition-all',
-          errors.name
-            ? 'border-red-300 bg-red-50 focus:ring-red-300'
-            : 'border-slate-200 focus:ring-brand-400 bg-white',
-        ]"
-      />
-      <p v-if="errors.name" class="text-red-500 text-xs mt-1">{{ errors.name }}</p>
+    <!-- Two-col row: name + condition -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div>
+        <label class="block text-sm font-semibold text-slate-700 mb-1.5">
+          Your Name <span class="text-red-500">*</span>
+        </label>
+        <input
+          v-model="name"
+          type="text"
+          placeholder="e.g. Ahmed K."
+          maxlength="60"
+          autocomplete="name"
+          :class="[
+            'w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:ring-2 transition-all',
+            errors.name
+              ? 'border-red-300 bg-red-50 focus:ring-red-300'
+              : 'border-slate-200 bg-white focus:ring-brand-400',
+          ]"
+        />
+        <p v-if="errors.name" class="text-red-500 text-xs mt-1">{{ errors.name }}</p>
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-slate-700 mb-1.5">
+          Condition / Procedure
+          <span class="text-slate-400 font-normal text-xs">(optional)</span>
+        </label>
+        <input
+          v-model="condition"
+          type="text"
+          placeholder="e.g. GERD, Endoscopy…"
+          maxlength="50"
+          class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-brand-400 focus:outline-none text-sm transition-all"
+        />
+      </div>
     </div>
 
     <!-- Star rating -->
@@ -89,26 +106,13 @@ const starLabels = ['Terrible', 'Poor', 'Average', 'Good', 'Excellent']
             :class="(hovered || rating) >= i ? 'text-amber-400' : 'text-slate-200'"
           />
         </button>
-        <span class="ml-2 text-sm text-slate-500 font-medium min-w-[5rem]">
+        <span class="ml-3 text-sm font-semibold min-w-[5rem]"
+          :class="(hovered || rating) >= 4 ? 'text-emerald-600' : (hovered || rating) >= 3 ? 'text-amber-600' : 'text-red-500'"
+        >
           {{ hovered ? starLabels[hovered - 1] : (rating ? starLabels[rating - 1] : '') }}
         </span>
       </div>
       <p v-if="errors.rating" class="text-red-500 text-xs mt-1">{{ errors.rating }}</p>
-    </div>
-
-    <!-- Condition (optional) -->
-    <div>
-      <label class="block text-sm font-semibold text-slate-700 mb-1.5">
-        Condition / Procedure
-        <span class="text-slate-400 font-normal text-xs">(optional)</span>
-      </label>
-      <input
-        v-model="condition"
-        type="text"
-        placeholder="e.g. GERD, Endoscopy, Hepatitis C…"
-        maxlength="50"
-        class="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:ring-2 focus:ring-brand-400 focus:outline-none text-sm transition-all"
-      />
     </div>
 
     <!-- Message -->
@@ -118,34 +122,39 @@ const starLabels = ['Terrible', 'Poor', 'Average', 'Good', 'Excellent']
       </label>
       <textarea
         v-model="message"
-        rows="4"
-        placeholder="Share your experience with Dr. Asif Raza Zaidi…"
-        maxlength="600"
+        rows="6"
+        placeholder="Share your experience with Dr. Asif Raza Zaidi — the more detail you provide, the more helpful it is for other patients…"
+        :maxlength="MAX_CHARS"
         :class="[
-          'w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:ring-2 transition-all resize-none',
+          'w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:ring-2 transition-all resize-none leading-relaxed',
           errors.message
             ? 'border-red-300 bg-red-50 focus:ring-red-300'
             : 'border-slate-200 bg-white focus:ring-brand-400',
         ]"
       ></textarea>
-      <div class="flex justify-between mt-1">
+      <div class="flex justify-between items-center mt-1.5">
         <p v-if="errors.message" class="text-red-500 text-xs">{{ errors.message }}</p>
-        <p class="text-slate-400 text-xs ml-auto">{{ message.length }}/600</p>
+        <p
+          class="text-xs ml-auto font-medium"
+          :class="message.length > MAX_CHARS * 0.9 ? 'text-amber-500' : 'text-slate-400'"
+        >
+          {{ message.length }}/{{ MAX_CHARS }}
+        </p>
       </div>
     </div>
 
     <!-- API error -->
-    <p v-if="error" class="text-red-500 text-sm bg-red-50 rounded-xl px-4 py-3 border border-red-100">
+    <p v-if="error" class="text-red-600 text-sm bg-red-50 rounded-xl px-4 py-3 border border-red-100">
       {{ error }}
     </p>
 
     <button
       type="submit"
       :disabled="submitting"
-      class="w-full py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold text-sm transition-all active:scale-95 shadow hover:shadow-md"
+      class="w-full py-4 rounded-xl bg-brand-600 hover:bg-brand-700 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold text-sm tracking-wide transition-all active:scale-95 shadow-lg hover:shadow-xl"
     >
       <span v-if="submitting" class="inline-flex items-center gap-2">
-        <svg class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24" aria-hidden="true">
           <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
           <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"/>
         </svg>
