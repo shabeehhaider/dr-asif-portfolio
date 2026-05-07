@@ -17,7 +17,7 @@ const navLinks = [
   { label: 'Contact',   href: '#contact',   id: 'contact' },
 ]
 
-const OLADOC_URL = 'https://oladoc.com/pakistan/lahore/dr/gastroenterologist/asif-raza-zaidi/17719'
+const WHATSAPP_BOOKING_URL = 'https://wa.me/923033551115?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20with%20Dr.%20Zaidi.'
 
 // Track the active section as the user scrolls.
 // rootMargin '-15% 0px -75% 0px' → 10% trigger window sitting just above
@@ -121,7 +121,7 @@ function smoothScroll(href) {
 
       <!-- Book Appointment CTA (desktop) -->
       <a
-        :href="OLADOC_URL"
+        :href="WHATSAPP_BOOKING_URL"
         target="_blank"
         rel="noopener noreferrer"
         class="hidden lg:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold transition-all shadow hover:shadow-md active:scale-95 focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2"
@@ -183,7 +183,7 @@ function smoothScroll(href) {
         </ul>
         <div class="px-4 pb-4">
           <a
-            :href="OLADOC_URL"
+            :href="WHATSAPP_BOOKING_URL"
             target="_blank"
             rel="noopener noreferrer"
             class="flex items-center justify-center w-full px-5 py-3.5 rounded-2xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm transition-all active:scale-95 shadow"

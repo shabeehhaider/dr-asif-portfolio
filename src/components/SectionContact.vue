@@ -4,15 +4,14 @@ import { PhoneIcon, CalendarDaysIcon, ChatBubbleLeftRightIcon } from '@heroicons
 
 const { el, isVisible } = useFadeIn()
 
-const OLADOC_URL   = 'https://oladoc.com/pakistan/lahore/dr/gastroenterologist/asif-raza-zaidi/17719'
 const WHATSAPP_URL = 'https://wa.me/923033551115?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20with%20Dr.%20Zaidi.'
 
 const actions = [
   {
     icon: CalendarDaysIcon,
-    label: 'Book on oladoc',
-    sub: 'Instant online booking',
-    href: OLADOC_URL,
+    label: 'Book Appointment',
+    sub: 'WhatsApp Mr. Kamran',
+    href: WHATSAPP_URL,
     external: true,
     class: 'bg-brand-600 hover:bg-brand-700 text-white shadow-xl hover:shadow-brand-200/60 hover:shadow-2xl',
     iconClass: 'bg-white/20 text-white',

@@ -166,7 +166,7 @@ const services = [
       <!-- Footer CTA -->
       <div class="mt-12 text-center">
         <a
-          href="https://oladoc.com/pakistan/lahore/dr/gastroenterologist/asif-raza-zaidi/17719"
+          href="https://wa.me/923033551115?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20with%20Dr.%20Zaidi."
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm shadow hover:shadow-md transition-all active:scale-95"

@@ -15,7 +15,7 @@ const credentials = [
 ]
 
 const highlights = [
-  { value: '10+',   label: 'Years of Practice' },
+  { value: '20+',   label: 'Years of Practice' },
   { value: '100%',  label: 'Patient Satisfaction' },
   { value: '4',     label: 'Clinics in Lahore' },
   { value: '15+',   label: 'Conditions Treated' },
@@ -71,7 +71,7 @@ const highlights = [
               class="absolute -bottom-5 -right-5 sm:-right-6 bg-brand-600 text-white rounded-2xl shadow-xl px-5 py-3 text-center"
               aria-hidden="true"
             >
-              <p class="text-3xl font-black leading-none">10+</p>
+              <p class="text-3xl font-black leading-none">20+</p>
               <p class="text-brand-200 text-xs font-medium mt-0.5">Years Exp.</p>
             </div>
           </div>
@@ -157,7 +157,7 @@ const highlights = [
           <!-- CTA -->
           <div class="mt-8 flex flex-col sm:flex-row gap-3">
             <a
-              href="https://oladoc.com/pakistan/lahore/dr/gastroenterologist/asif-raza-zaidi/17719"
+              href="https://wa.me/923033551115?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20with%20Dr.%20Zaidi."
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm transition-all shadow hover:shadow-md active:scale-95"

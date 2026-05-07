@@ -45,14 +45,14 @@ function scrollToVideos() {
             Asst. Professor of Gastroenterology · Sheikh Zayed Hospital, Lahore
           </p>
           <p class="text-base sm:text-lg text-white/55 max-w-lg mx-auto lg:mx-0 mb-10">
-            10+ years helping patients understand and overcome gut &amp; liver
+            20+ years helping patients understand and overcome gut &amp; liver
             conditions in Lahore, Pakistan — in Urdu and English.
           </p>
 
           <!-- CTA buttons -->
           <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
             <a
-              href="https://oladoc.com/pakistan/lahore/dr/gastroenterologist/asif-raza-zaidi/17719"
+              href="https://wa.me/923033551115?text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20with%20Dr.%20Zaidi."
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white text-brand-800 font-bold text-base shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all active:scale-95 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-brand-800"
